@@ -1,0 +1,8 @@
+<template name="my-footer">
+    <view class="weui-footer">
+        <view class="weui-footer__links">
+            <a class="weui-footer__link weui-wa-hotarea">和风天气</a>
+        </view>
+        <view class="weui-footer__text">技术支持：韩昊洋大帅哥</view>
+    </view>
+</template>
