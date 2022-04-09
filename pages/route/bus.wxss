@@ -1,0 +1,25 @@
+/* pages/route/bus.wxss */
+
+.weui-tabbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #3df;
+  height: 60px;
+}
+
+.weui-tab__panel {
+  position: absolute;
+  top: 60px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.weui-btn-area {
+  margin: 10px;
+}
+
+.weui-btn {
+  width: 100%;
+}

@@ -1,8 +1,11 @@
+
 <template name="my-footer">
+  <view class="page__bd page__bd_spacing">
     <view class="weui-footer">
-        <view class="weui-footer__links">
-            <a class="weui-footer__link weui-wa-hotarea">和风天气</a>
-        </view>
-        <view class="weui-footer__text">技术支持：韩昊洋大帅哥</view>
+			<view class="weui-footer__links">
+				<a class="weui-footer__link" >昊洋大帅哥</a>
+			</view>
+			<view class="weui-footer__text">Copyright @ 2022 ditu.com</view>
     </view>
+  </view>
 </template>

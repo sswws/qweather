@@ -1,0 +1,10 @@
+/* pages/home/index.wxss */
+
+.map-text {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  padding: 5px 15px;
+  background: #fff;
+}

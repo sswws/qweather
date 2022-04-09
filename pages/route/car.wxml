@@ -1,0 +1,56 @@
+<!--pages/route/car.wxml-->
+<view class="page">
+	<view class="page__bd" style="height: 100%;">
+		<view class="weui-tab">
+			<view class="weui-tab__panel">
+        <view class="map-box" style="bottom: {{listHeight}}">
+					<map
+						id="MyMap" 
+						class="map"
+						markers="{{markers}}" 
+						scale="14"
+						polyline="{{polyline}}"
+						longitude="{{markers[0].longitude}}"
+						latitude="{{markers[0].latitude}}" >
+					</map>
+				</view>
+
+				<!-- 文本导航 -->
+				<view class="text-box" style="height: {{listHeight}}">
+					<view class="text">{{distance}} {{duration}}</view>
+					<view class="detail-button" bindtap="checkDetail">详情</view>
+
+					<view class="weui-panel weui-panel_access" wx:if="{{listShowed}}">
+            <view class="weui-panel__bd" wx:for="{{steps}}" wx:key="index" >
+              <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__desc">{{index+1}}. {{item.instruction}}</view>
+              </view>
+            </view>
+          </view>
+				</view>
+			</view>
+			<view class="weui-tabbar">
+				<view class="weui-tabbar__item " bindtap="changeNav" data-type="walking">
+					<view style="display: inline-block; position: relative;">
+						<image src="../../static/images/walk.png" alt class="weui-tabbar__icon"></image>
+					</view>
+					<view class="weui-tabbar__label">步行</view>
+				</view>
+				<view class="weui-tabbar__item" bindtap="changeNav" data-type="bike">
+					<image src="../../static/images/bike.png" alt class="weui-tabbar__icon"></image>
+					<view class="weui-tabbar__label">骑行</view>
+				</view>
+				<view class="weui-tabbar__item weui-bar__item_on" bindtap="changeNav" data-type="car">
+					<view style="display: inline-block; position: relative;">
+						<image src="../../static/images/car-active.png" alt class="weui-tabbar__icon"></image>
+					</view>
+					<view class="weui-tabbar__label">驾车</view>
+				</view>
+				<view class="weui-tabbar__item" bindtap="changeNav" data-type="bus">
+					<image src="../../static/images/bus.png" alt class="weui-tabbar__icon"></image>
+					<view class="weui-tabbar__label">公交</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

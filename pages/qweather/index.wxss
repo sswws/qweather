@@ -1,1 +1,23 @@
 /* pages/qweather/index.wxss */
+
+.page__hd {
+  padding: 40rpx;
+}
+
+.page__title {
+  font-size: 80rpx;
+  font-weight: bold;
+}
+
+.page__bd_spacing {
+  margin: 40rpx 0;
+}
+
+.weui-grid {
+  width: 25%;
+}
+
+.weui-grid__icon > image {
+  height: 20px;
+  width: 20px;
+}

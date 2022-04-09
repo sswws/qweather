@@ -1,10 +1,6 @@
 <!--logs.wxml-->
 <view class="container log-list">
-  <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log.date}}</text>
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
 </view>
-
-<!-- 引入页脚 -->
-<import src="../../tpl/footer.wxml"></import>
-<template is="my-footer"></template>

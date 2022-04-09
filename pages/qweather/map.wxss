@@ -1,0 +1,11 @@
+/* pages/qweather/map.wxss */
+
+.map-text {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100vw;
+  padding: 5px 15px;
+  background: #fff;
+}

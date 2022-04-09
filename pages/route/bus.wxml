@@ -1,0 +1,49 @@
+<!--pages/route/bus.wxml-->
+<view class="page">
+	<view class="page__bd" style="height: 100%;">
+		<view class="weui-tab">
+			<view class="weui-tab__panel">
+        
+				<view class="weui-btn-area">
+          <a class="weui-btn weui-btn_default" bindtap="transferOpts">出行策略 ({{selectType}})</a>
+        </view>
+
+				<!-- 出行列表 -->
+				<view class="text_box">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd" wx:for="{{transits}}" wx:key="index" >
+              <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title">{{index+1}}. {{item.transportname}}</view>
+                <view class="weui-media-box__desc"> {{item.minute}} 分钟 | {{item.cost}} 元 | {{item.distance}} 公里 | 步行 {{item.walking_distance}} 米</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+			</view>
+			<view class="weui-tabbar">
+				<view class="weui-tabbar__item " bindtap="changeNav" data-type="walking">
+					<view style="display: inline-block; position: relative;">
+						<image src="../../static/images/walk.png" alt class="weui-tabbar__icon"></image>
+					</view>
+					<view class="weui-tabbar__label">步行</view>
+				</view>
+				<view class="weui-tabbar__item" bindtap="changeNav" data-type="bike">
+					<image src="../../static/images/bike.png" alt class="weui-tabbar__icon"></image>
+					<view class="weui-tabbar__label">骑行</view>
+				</view>
+				<view class="weui-tabbar__item" bindtap="changeNav" data-type="car">
+					<view style="display: inline-block; position: relative;">
+						<image src="../../static/images/car.png" alt class="weui-tabbar__icon"></image>
+					</view>
+					<view class="weui-tabbar__label">驾车</view>
+				</view>
+				<view class="weui-tabbar__item weui-bar__item_on" bindtap="changeNav" data-type="bus">
+					<image src="../../static/images/bus-active.png" alt class="weui-tabbar__icon"></image>
+					<view class="weui-tabbar__label">公交</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
